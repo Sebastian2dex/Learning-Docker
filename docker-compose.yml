@@ -1,0 +1,25 @@
+services:
+  server:
+    build: ./server
+    ports:
+      - "12345:12345"
+    container_name: "express-server"
+    networks:
+      - fullstack-net
+    restart: unless-stopped
+
+  client:
+    build: ./client/vite-project
+    ports:
+      - "5173:3000"
+    container_name: "react-client"
+    networks:
+      - fullstack-net
+    restart: unless-stopped
+    depends_on:
+      - server
+
+
+networks:
+  fullstack-net:
+    driver: bridge
