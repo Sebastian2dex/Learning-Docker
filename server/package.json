@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A full stack learning project",
   "license": "ISC",
-  "author": "Sagnik M",
+  "author": "",
   "type": "module",
   "main": "index.js",
   "scripts": {
